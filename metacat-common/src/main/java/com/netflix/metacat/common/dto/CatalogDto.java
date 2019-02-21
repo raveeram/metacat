@@ -52,6 +52,20 @@ public class CatalogDto extends BaseDto implements HasDefinitionMetadata {
     private QualifiedName name;
     @ApiModelProperty(value = "the type of the connector of this catalog", required = true)
     private String type;
+    //account
+    // ex: "abc_test"
+    @ApiModelProperty(value = "the account type for this catalog", required = false)
+    private String account;
+    //region
+    // ex: "us-east-1"
+    @ApiModelProperty(value = "the region of this catalog", required = false)
+    private String region;
+    //env
+    // ex: "prod", "test"
+    @ApiModelProperty(value = "the environment of this catalog", required = false)
+    private String env;
+    @ApiModelProperty(value = "the cluster hosting this catalog", required = false)
+    private String clusterName;
 
     @JsonIgnore
     public QualifiedName getDefinitionName() {
