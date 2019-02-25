@@ -10,32 +10,30 @@ import lombok.NoArgsConstructor;
 
 import java.util.Map;
 
+/**
+ * Connector catalog information.
+ */
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 public final class CatalogInfo extends BaseInfo {
-    private String account;
-    private String region;
-    private String env;
-    private String clusterName;
+    private ClusterInfo clusterInfo;
 
     /**
-     *
+     * Constructor.
+     * @param name qualified name of the catalog
+     * @param auditInfo audit info
+     * @param metadata metadata properties
+     * @param clusterInfo cluster information
      */
     @Builder
     private CatalogInfo(
         final QualifiedName name,
         final AuditInfo auditInfo,
         final Map<String, String> metadata,
-        final String account,
-        final String region,
-        final String env,
-        final String clusterName
+        final ClusterInfo clusterInfo
     ) {
         super(name, auditInfo, metadata);
-        this.account = account;
-        this.region = region;
-        this.env = env;
-        this.clusterName = clusterName;
+        this.clusterInfo = clusterInfo;
     }
 }

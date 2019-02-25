@@ -1,6 +1,5 @@
 /*
- *
- *  Copyright 2017 Netflix, Inc.
+ *  Copyright 2019 Netflix, Inc.
  *
  *     Licensed under the Apache License, Version 2.0 (the "License");
  *     you may not use this file except in compliance with the License.
@@ -13,7 +12,6 @@
  *     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *     See the License for the specific language governing permissions and
  *     limitations under the License.
- *
  */
 package com.netflix.metacat.common.server.api.v1;
 
@@ -155,7 +153,7 @@ public interface MetacatV1 {
      * @return database with details
      */
     DatabaseDto getDatabase(final String catalogName, final String databaseName, final boolean includeUserMetadata,
-        final boolean includeTableNames);
+                            final boolean includeTableNames);
 
     /**
      * Get the catalog by name.

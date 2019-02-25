@@ -1,6 +1,5 @@
 /*
- *
- *  Copyright 2016 Netflix, Inc.
+ *  Copyright 2019 Netflix, Inc.
  *
  *     Licensed under the Apache License, Version 2.0 (the "License");
  *     you may not use this file except in compliance with the License.
@@ -13,7 +12,6 @@
  *     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *     See the License for the specific language governing permissions and
  *     limitations under the License.
- *
  */
 package com.netflix.metacat.common;
 
@@ -128,8 +126,8 @@ public class MetacatRequestContext {
      * builder class for MetacatRequestContext.
      * @return the builder class for MetacatRequestContext
      */
-    public static MetacatRequestContext.MetacatRequestContextBuilder builder() {
-        return new MetacatRequestContext.MetacatRequestContextBuilder();
+    public static MetacatRequestContextBuilder builder() {
+        return new MetacatRequestContextBuilder();
     }
 
     /**
@@ -155,7 +153,7 @@ public class MetacatRequestContext {
          * @param userName user name at client side
          * @return the builder
          */
-        public MetacatRequestContext.MetacatRequestContextBuilder userName(@Nullable final String userName) {
+        public MetacatRequestContextBuilder userName(@Nullable final String userName) {
             this.bUserName = userName;
             return this;
         }
@@ -166,7 +164,7 @@ public class MetacatRequestContext {
          * @param clientAppName application name of client
          * @return the builder
          */
-        public MetacatRequestContext.MetacatRequestContextBuilder clientAppName(@Nullable final String clientAppName) {
+        public MetacatRequestContextBuilder clientAppName(@Nullable final String clientAppName) {
             this.bClientAppName = clientAppName;
             return this;
         }
@@ -177,7 +175,7 @@ public class MetacatRequestContext {
          * @param clientId client identifier, such as host name
          * @return the builder
          */
-        public MetacatRequestContext.MetacatRequestContextBuilder clientId(@Nullable final String clientId) {
+        public MetacatRequestContextBuilder clientId(@Nullable final String clientId) {
             this.bClientId = clientId;
             return this;
         }
@@ -188,7 +186,7 @@ public class MetacatRequestContext {
          * @param jobId jobid from client side
          * @return the builder
          */
-        public MetacatRequestContext.MetacatRequestContextBuilder jobId(@Nullable final String jobId) {
+        public MetacatRequestContextBuilder jobId(@Nullable final String jobId) {
             this.bJobId = jobId;
             return this;
         }
@@ -199,7 +197,7 @@ public class MetacatRequestContext {
          * @param dataTypeContext the data type context in rest api
          * @return the builder
          */
-        public MetacatRequestContext.MetacatRequestContextBuilder dataTypeContext(
+        public MetacatRequestContextBuilder dataTypeContext(
             @Nullable final String dataTypeContext) {
             this.bDataTypeContext = dataTypeContext;
             return this;
@@ -211,7 +209,7 @@ public class MetacatRequestContext {
          * @param apiUri the uri in rest api
          * @return the builder
          */
-        public MetacatRequestContext.MetacatRequestContextBuilder apiUri(final String apiUri) {
+        public MetacatRequestContextBuilder apiUri(final String apiUri) {
             this.bApiUri = apiUri;
             return this;
         }
@@ -222,7 +220,7 @@ public class MetacatRequestContext {
          * @param scheme the scheme component in restapi such as http
          * @return the builder
          */
-        public MetacatRequestContext.MetacatRequestContextBuilder scheme(final String scheme) {
+        public MetacatRequestContextBuilder scheme(final String scheme) {
             this.bScheme = scheme;
             return this;
         }
