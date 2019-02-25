@@ -55,7 +55,6 @@ public class CatalogDto extends BaseDto implements HasDefinitionMetadata {
     @ApiModelProperty(value = "Cluster information referred by this catalog", required = true)
     @JsonProperty
     private ClusterDto clusterDto;
-
     @JsonIgnore
     public QualifiedName getDefinitionName() {
         return name;

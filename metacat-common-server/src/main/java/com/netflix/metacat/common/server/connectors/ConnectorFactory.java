@@ -30,8 +30,7 @@ public interface ConnectorFactory {
     String UNSUPPORTED_MESSAGE = "Not supported by this connector";
 
     /**
-     * Returns the catalog service implementation of the connector.
-     *
+     * Returns the catalog service implementation of the connector
      * @return Returns the catalog service implementation of the connector.
      */
     default ConnectorCatalogService getCatalogService() {
